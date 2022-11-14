@@ -1,0 +1,37 @@
+import java.util.Scanner;
+
+class Main {
+
+	public static void main(String[] args) {
+		
+		
+		Scanner sc = new Scanner(System.in);  // 첫번째 입력값
+    
+		int n = sc.nextInt();  // 두번째입력값
+		int [] a = new int[n+2];
+		for(int i = 0; i < n; i++) {
+			a[i] = sc.nextInt();
+		}
+		a[n+1] = 0;
+		int spaceN = n*n;
+		int []space = new int[spaceN+1];
+		for(int i = 0; i < n; i++) {
+			for(int j = i; j < n; j++) {
+				if(a[j] >= a[j+1]) {  // 같은숫자나올경우
+                    space[spaceN] = a[j] - a[i];
+					spaceN--;
+					break;
+				}
+				space[spaceN] = a[j] - a[i];
+				spaceN--;
+			}
+		}
+		int max = space[0];
+		for(int num : space) { 
+			max = max > num ? max : num;
+		}
+		System.out.println(max);
+		
+	}
+
+}
