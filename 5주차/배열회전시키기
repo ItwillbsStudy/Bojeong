@@ -1,3 +1,7 @@
+// 첫번째꺼담아서 맨마지막으로
+// 맨뒤에꺼 담아서 맨 앞으로
+// 한칸씩 오른쪽으로 담거나 한칸씩 왼쪽으로 담기
+
 class Solution {
     public int[] solution(int[] numbers, String direction) {
 
@@ -25,3 +29,7 @@ class Solution {
         return answer;
     }
 }
+
+numbers	direction	result
+[1, 2, 3]	"right"	[3, 1, 2]
+[4, 455, 6, 4, -1, 45, 6]	"left"	[455, 6, 4, -1, 45, 6, 4]
