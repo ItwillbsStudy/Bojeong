@@ -1,0 +1,30 @@
+class Solution {
+    public int solution(int[] numbers, int k) {
+        int answer = 0;
+        
+		int [] ex = new int [1000];             //문제에 1000 이라고 적혀있어서
+		int a =0;
+		while (a < ex.length-1-numbers.length) { //numbers배열에 입력한 값을 ex배열에 999까지 반복으로 넣겠다  
+			for(int j = 0; j < numbers.length; j++) {  // 예)123123123123123123123123123123
+				ex[a] = numbers[j];
+				a++;
+			}
+		}
+		answer =ex[k*2-2]; // ex배열에서 해당값 가져오기
+
+        return answer;
+    }
+}
+
+
+
+제한사항
+2 < numbers의 길이 < 100
+0 < k < 1,000
+numbers의 첫 번째와 마지막 번호는 실제로 바로 옆에 있습니다.
+numbers는 1부터 시작하며 번호는 순서대로 올라갑니다.
+입출력 예
+numbers	k	result
+[1, 2, 3, 4]	2	3
+[1, 2, 3, 4, 5, 6]	5	3
+[1, 2, 3]	3	2
