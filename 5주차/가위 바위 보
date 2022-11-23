@@ -1,0 +1,20 @@
+class Solution {
+    public String solution(String rsp) {
+        String answer = "";
+        
+        String[] b = rsp.split("");
+        for(int i = 0; i < b.length; i++) {
+			if(b[i].equals("2")) {
+				answer += "0";
+			}
+			if(b[i].equals("0")) {
+				answer += "5";
+			}
+			if(b[i].equals("5")) {
+				answer += "2";
+			}
+		}
+        
+        return answer;
+    }
+}
