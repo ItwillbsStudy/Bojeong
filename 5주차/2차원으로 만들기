@@ -1,3 +1,5 @@
+
+
 class Solution {
     public int[][] solution(int[] num_list, int n) {
     
@@ -5,8 +7,12 @@ class Solution {
 		int a = 0;
 		for(int i = 0; i < num_list.length/n; i++) {
 			for(int j = 0; j < n; j++) {
-				answer[i][j] = num_list[a];
+				answer[i][j] = num_list[a];	//num_list 배열 0 1 2 3 4 증가 그래서 a변수 만들어서 for문 돌때마다 증가했습다
 				a++;
 			}
 			
 		}
+		
+num_list			n	result
+[1, 2, 3, 4, 5, 6, 7, 8]	2	[[1, 2], [3, 4], [5, 6], [7, 8]]		
+		
