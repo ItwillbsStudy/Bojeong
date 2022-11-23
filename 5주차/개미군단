@@ -1,0 +1,17 @@
+class Solution {
+    public int solution(int hp) {
+        int answer = 0;
+        
+        int a = 5;
+        int b = 3;
+        
+        int result = 0;
+        answer = hp / a;
+        answer += (hp%a)/b;
+        answer += (hp%a)%b;
+        
+        
+        
+        return answer;
+    }
+}
