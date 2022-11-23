@@ -2,10 +2,10 @@ class Solution {
     public String solution(String rsp) {
         String answer = "";
         
-        String[] b = rsp.split("");
-        for(int i = 0; i < b.length; i++) {
-			if(b[i].equals("2")) {
-				answer += "0";
+        String[] b = rsp.split("");			// rsp 하나씩 쪼개서 b에 담기
+        for(int i = 0; i < b.length; i++) {		// b의 크기많큼 
+			if(b[i].equals("2")) {		
+				answer += "0";		// 2일경우 0일경우 5일경우
 			}
 			if(b[i].equals("0")) {
 				answer += "5";
@@ -18,3 +18,7 @@ class Solution {
         return answer;
     }
 }
+
+rsp	result
+"2"	"0"
+"205"	"052"
